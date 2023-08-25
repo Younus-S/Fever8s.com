@@ -1,25 +1,9 @@
+{% extends "master.html" %}
 {% load static %}
-<!DOCTYPE html>
-<head>
-   <meta charset="utf-8">
-	<title>Fever8s</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+
+{% block title %}Fever8s{% endblock %}
+{% block content %}
 	
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-   <link rel="stylesheet" href="{% static 'css/default.css' %}">
-	<link rel="stylesheet" href="{% static 'css/layout.css' %}">
-   <link rel="stylesheet" href="{% static 'css/media-queries.css' %}">
-   <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
-
-   <script src="js/modernizr.js"></script>
-
-	<link rel="shortcut icon" href="favicon.png" >
-
-</head>
-
-<body>
 
   <header id="home">
 
@@ -170,6 +154,4 @@
       </div>
 
    </footer> 
-</body>
-
-</html>
+{% endblock %}
