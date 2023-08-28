@@ -8,3 +8,6 @@ class Movies(models.Model):
   moviename = models.CharField(max_length=255)
   category = models.CharField(max_length=255)
   details = models.CharField(max_length=255)
+  
+  def __str__(self):
+    return f"{self.moviename}"

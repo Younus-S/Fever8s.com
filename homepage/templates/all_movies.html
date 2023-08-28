@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Movie</h1>
+  
+<ul>
+  {% for x in mymovies %}
+    <li><a href="movie_details/{{ x.id }}">{{ x.moviename }} - {{ x.category }}</a></li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
