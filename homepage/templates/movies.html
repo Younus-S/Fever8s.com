@@ -4,14 +4,12 @@
 {% block title %}Fever8s: Movies{% endblock %}
 {% block content %}
 	
-
-  <header id="home">
-    <link rel="stylesheet" href="{% static 'css/movies.css' %}">
-
+   <header id="Movies">
+   <link rel="stylesheet" href="{% static 'css/movies.css' %}">
       <nav id="nav-wrap">
 
          <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+         <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
          <ul id="nav" class="nav">
             <li class="current"><a class="smoothscroll" href="/">Home</a></li>
@@ -19,13 +17,13 @@
             <li><a class="smoothscroll" href="#contact">Contact</a></li><br>
 
             <li><a class="smoothscroll" href="/movies">Movies</a></li>
-            <li><a class="smoothscroll" href="#Books">Books</a></li>
-            <li><a class="smoothscroll" href="#Games">Games</a></li>
-            <li><a class="smoothscroll" href="#Songs">Songs</a></li>
-            <li><a class="smoothscroll" href="#Comics">Comics</a></li>
-            <li><a class="smoothscroll" href="#Videos">Videos</a></li>
-            <li><a class="smoothscroll" href="#Software">Software</a></li>
-            <li><a class="smoothscroll" href="#Websites">Websites</a></li>
+            <li><a class="smoothscroll" href="/Books">Books</a></li>
+            <li><a class="smoothscroll" href="/Games">Games</a></li>
+            <li><a class="smoothscroll" href="/Songs">Songs</a></li>
+            <li><a class="smoothscroll" href="/Comics">Comics</a></li>
+            <li><a class="smoothscroll" href="/Videos">Videos</a></li>
+            <li><a class="smoothscroll" href="/Software">Software</a></li>
+            <li><a class="smoothscroll" href="/TV Shows">Websites</a></li>
          </ul> <!-- end #nav -->
 
       </nav> <!-- end #nav-wrap -->
@@ -46,19 +44,22 @@
          </div>
       </div>
 
-    
-   </header>
-
+  </header>
    <!-- Movies Gallery -->
    <section class="section">
     <h1>Movies Gallery</h1>
-    <div class="grid">
-      <div class="item">
-        <a href="https://www.imdb.com/title/tt0167260/?ref_=adv_li_tt"><div class="item__details">
-          Lord of The Rings 
-        </div></a>
-      </div>
-      <div class="item">
+      <div class="grid">
+            {% for x in mymovies %}
+              <a href="movie_details/{{ x.id }}" class="item">
+         <!-- <a href="https://www.imdb.com/title/tt0167260/?ref_=adv_li_tt" > -->
+         <div>
+             <div class="item__details">
+                {{ x.moviename }} - {{ x.category }}
+            </div>
+         </div>
+         </a>
+      {% endfor %}
+      <!-- <div class="item">
         <div class="item__details">
           Interstellar
         </div>
@@ -128,7 +129,7 @@
            The Lion King
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
    <!-- footer
    ================================================== -->
