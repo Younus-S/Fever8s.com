@@ -19,6 +19,63 @@ def movies(request):
   }
   return HttpResponse(template.render(context, request))
 
+def games(request):
+  mygames = Movies.objects.all().values()
+  template = loader.get_template('games.html')
+  context = {
+  'mygames': mygames,
+}
+  return HttpResponse(template.render(context, request))
+
+def books(request):
+  mygames = Movies.objects.all().values()
+  template = loader.get_template('books.html')
+  context = {
+  'mygames': mygames,
+}
+  return HttpResponse(template.render(context, request))
+
+def songs(request):
+  mygames = Movies.objects.all().values()
+  template = loader.get_template('songs.html')
+  context = {
+  'mygames': mygames,
+}
+  return HttpResponse(template.render(context, request))
+
+def software(request):
+  mygames = Movies.objects.all().values()
+  template = loader.get_template('software.html')
+  context = {
+  'mygames': mygames,
+}
+  return HttpResponse(template.render(context, request))
+
+def videos(request):
+  mygames = Movies.objects.all().values()
+  template = loader.get_template('videos.html')
+  context = {
+  'mygames': mygames,
+}
+  return HttpResponse(template.render(context, request))
+
+def tvshows(request):
+  mygames = Movies.objects.all().values()
+  template = loader.get_template('tvshows.html')
+  context = {
+  'mygames': mygames,
+}
+  return HttpResponse(template.render(context, request))
+
+def comics(request):
+  mygames = Movies.objects.all().values()
+  template = loader.get_template('comics.html')
+  context = {
+  'mygames': mygames,
+}
+  return HttpResponse(template.render(context, request))
+
+
 # def allmovies(request):
 #   mymovies = Movies.objects.all().values()
 #   template = loader.get_template('all_movies.html')

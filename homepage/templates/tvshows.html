@@ -1,16 +1,15 @@
 {% extends "master.html" %}
 {% load static %}
 
-{% block title %}Fever8s{% endblock %}
+{% block title %}Fever8s: Games{% endblock %}
 {% block content %}
 	
-
-  <header id="home">
-
+   <header id="tvshows">
+   <link rel="stylesheet" href="{% static 'css/movies.css' %}">
       <nav id="nav-wrap">
 
          <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+         <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
          <ul id="nav" class="nav">
             <li class="current"><a class="smoothscroll" href="/">Home</a></li>
@@ -31,8 +30,7 @@
 
       <div class="row banner">
          <div class="banner-text">
-            <h1 class="responsive-headline">FEVER8s</h1>
-            <h3><span>Multimedia Website</span></h3>
+            <h1 class="responsive-headline">TV Shows</h1>
             <hr />
             <ul class="social">
                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -46,87 +44,25 @@
          </div>
       </div>
 
-      <p class="scrolldown">
-         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
-      </p>
-
-   </header>
-
-   <section id="contact">
-
-         <div class="row section-head">
-
-            <div class="two columns header-col">
-
-               <h1><span>Get In Touch.</span></h1>
-
+  </header>
+   <!-- Movies Gallery -->
+   <section class="section">
+    <h1>TV Shows Gallery</h1>
+      <!-- <div class="grid">
+            {% for x in mymovies %}
+              <a href="movie_details/{{ x.id }}" class="item">
+          <a href="https://www.imdb.com/title/tt0167260/?ref_=adv_li_tt" >
+         <div>
+             <div class="item__details">
+                {{ x.moviename }} - {{ x.category }}
             </div>
-
-            <div class="ten columns">
-
-                  <p class="lead">You may contact us by writing and submitting your message here.
-                  </p>
-
-            </div>
-
          </div>
-
-         <div class="row">
-
-            <div class="eight columns">
-
-               <!-- form -->
-               <form action="" method="post" id="contactForm" name="contactForm">
-					<fieldset>
-
-                  <div>
-						   <label for="contactName">Name <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactName" name="contactName">
-                  </div>
-
-                  <div>
-						   <label for="contactEmail">Email <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
-                  </div>
-
-                  <div>
-						   <label for="contactSubject">Subject</label>
-						   <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
-                  </div>
-
-                  <div>
-                     <label for="contactMessage">Message <span class="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
-                  </div>
-
-                  <div>
-                     <button class="submit">Submit</button>
-                     <span id="image-loader">
-                        <img alt="" src="images/loader.gif">
-                     </span>
-                  </div>
-
-					</fieldset>
-				   </form> <!-- Form End -->
-
-               <!-- contact-warning -->
-               <div id="message-warning"> Error boy</div>
-               <!-- contact-success -->
-				   <div id="message-success">
-                  <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-				   </div>
-
-            </div>
-
-
-      </div>
-
-   </section> 
-
-
-   <!-- footer
-   ================================================== -->
-   <footer>
+         </a>
+      {% endfor %}
+  
+  </div> -->
+  
+  <footer>
 
       <div class="row">
 
